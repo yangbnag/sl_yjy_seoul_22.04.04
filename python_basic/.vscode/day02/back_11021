@@ -1,0 +1,23 @@
+Text_case = int(input())
+A, B = map(int, input(). split())
+#C, D = map(int, input(). split())
+#E, F = map(int, input(). split())
+#G, H = map(int, input(). split())
+#a, b = map(int, input(). split())
+
+
+
+print(f'{Text_case-4},{A + B})
+#print(Text_case-3)
+#print(Text_case-2)
+#print(Text_case-1)
+#print((Text_case+)
+
+
+# n1, n2 = map(int, input(). split())
+# m1, m2 = map(int, input(). split())
+# k1, k2 = map(int, input(). split())
+
+# print(f'case #1: {n1 + n2}')
+# print(f'case #2: {m1 + m2}')
+# print(f'case #3: {k1 + k2}')

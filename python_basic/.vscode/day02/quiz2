@@ -1,0 +1,6 @@
+
+a = int(input('정수1 :'))
+b = int(input('정수2 :'))
+c = int(input('정수3 :'))
+
+print(f'세 값의 핪은 {a+b+c}입니다.')

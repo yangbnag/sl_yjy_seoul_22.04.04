@@ -1,0 +1,9 @@
+
+ti_year = int(input())
+s_year = ti_year - 543
+print(s_year)
+
+#'''
+# 단락 주석 (파이썬은 한줄 주석이나 편법으로 ''' 사용)
+# '''
+

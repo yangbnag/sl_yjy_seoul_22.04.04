@@ -1,0 +1,13 @@
+
+# 1byte = 8bit
+# 64bit = 8byte
+
+a = 10 # 정수
+b = 20.5 # 실수
+c = True # 문자
+d = 'hello'
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))

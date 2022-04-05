@@ -1,0 +1,8 @@
+
+print('2개의 정수값을 입력하세요.')
+
+n1 = int(input('정수x:'))
+n2 = int(input('정수y:'))
+
+a = round((n1/n2)*100)
+print(f'x값은 y값의 {a}% 입니다.')

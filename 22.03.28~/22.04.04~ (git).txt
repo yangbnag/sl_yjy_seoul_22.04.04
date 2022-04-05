@@ -1,0 +1,113 @@
+22.04.04
+
+git 입문
+
+1. 초기화(initialize)
+2. 버전 생성
+ - add (이번 버전에서 변경 혹은 추가 할때) 
+ - commit (add로 실행 한 것을 확정)
+
+ ※ 버전 관리 용어 정리
+ - Working tree [ ex ) a.txt ]
+ - Staging area [ add ]
+ - Repository [commit ]
+
+===========
+[first]
+
+git init -> git status -> git add a.txt -> git commit -m "first commit"
+-> git config --global user.email "yanbam@naver.com"
+-> git log
+
+
+[second] a.txt의 수정과 b.txt의 추가
+수정이 발생한 순간 add가 풀림으로 a도 add로 수정해줘야함.
+
+ git diff a.txt (first에서 변경된 내용 확인)
+-> git add a.txt b.txt
+-> git commit -m "second commit"
+-> git log (요약 출력은 git log --oneline)
+
+[세번째 ;] a.txt 삭제, b.txt 내용 수정
+add 했던 파일은 git add를 안하고 -am
+
+->git commit - am "3rd commit -a.txt deleted"
+
+[네번째] a.txt 복구
+->git log --oneline을 치고 a.txt가 살아있는 버전으로 이동할것임.
+
+->git checkout 05b8d5f( 전 버전의 고유번호 입력)
+
+->최신버전으로 이동하고 싶다면 git checkout master
+
+
+===============
+버전 업데이트 
+add 할 파일이 많을경우 추가된 파일 한번에 add 하는 방법.
+
+-> git add .
+
+===복습====
+git status -> git add -> git commit -m "버전이름"
+->git log -> git log --oneline
+
+=========정리 =======================================
+0. 사용자 정보 등록 (한 컴퓨터당 한번)
+(git config --global user.email "mail 주소")
+(git config --global user.name "닉네임")
+
+1. 로컬저장소 (내 컴퓨터) 프로젝트 폴더 생성
+
+2. 해당 폴더로 진입해서 (cd 명령어)
+   git 초기화(버전관리시작) (git init 명령어) (프로젝트 폴더당 한번)
+
+3. 버전관리할 파일을 추가한다. (git add 파일명 or . / 명령어) (add)
+
+4. 버전을 생성한다. (git commit -m "커밋메시지") (commit)
+
+5. 원격 저장소 생성 (깃허브 저장소) (프로젝트당 한번)
+    - 깃허브 사이트 로그인 한 후  + 버튼 누르고 New Repository선택
+
+6. 로컬 저장소와 원격 저장소 연동
+   git remote add origin https://저장소 주소
+
+7. 로컬 버전관리작업내용 원격에 업로드
+   git push origin master
+
+======== 예제 ========
+e드라이브 개인폴더에 image_practice 라는 프로젝트 폴더 생성 후
+인터넷에서 아무 사진이나 다운 받은 후
+버전으로 등록 한 후
+원격 저장소를 생성하여 버전정보를 업로드하세요.
+
+==============주의사항=============
+#로컬저장소 내부에서는 커밋을 취소가능
+#푸시 이후에는 커밋취소가 불가능
+ -> 취소는 가능하지만 커밋취소를 했다는 흔적이 남습니다.
+#푸시는 확정적인 상황에서만 진행 
+
+=======집 - 원격 - 학원 ==============
+
+#학원 - v6
+  원격 - v6
+    집  - x (git hub에서 복제를 할 것임)
+
+클론 = 복제 (git clone 원격주소)
+집에서 만든 버전을 우선 원격에 푸쉬
+
+#학원 -v6
+   원격 v7
+     집 v7
+
+학원 버전 7로 바꾸기!
+학원에서 다운로드 (git pull)
+
+주의사항
+----------
+# 학원 - v9
+   원격 - v9
+      집 - v7 상태에서 v10 (v8,9 번이 빠진 상태에서 푸쉬 가능)
+
+
+============ 태그 설정 하는 방법
+git tag v1.0.0 05b8d5f
