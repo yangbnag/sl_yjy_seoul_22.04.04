@@ -85,4 +85,118 @@ canvas :
 - canvas를 제대로 사용하려면 자바스크립트에 대한 지식이 필요합니다. 
 - 이 장에서는 간단한 캔버스 사용 예시만을 확인하고 넘어가겠습니다.
 
-script :  자바스크립트 코드를 문서에 포함하거나 참조할 때 사용 합니다.
+script :  자바스크립트 코드를 문서에 포함하거나 참조할 때 사용 합니다. 
+ (자바스크립트를 다음에 배울때 해보겠습니다. ex)
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+        .box {
+        width: 300px;
+        height: 300px;
+        background : orange;
+        margin : 100px;
+</style>
+
+
+</head>
+<body>
+
+    <div class="box">
+
+        <script>
+            const $box = document.querySelector('.box');
+            $box.onclick = e => {
+                alert('박스 줄이기!');
+                $box.style.background = 'red';
+                $box.style.width = '150px';
+                $box.style.height = '150px';
+            };
+            
+            </script>
+
+
+    </div>
+
+
+</body>
+</html>
+
+
+4.표 컨텐츠 태그
+ table : table 요소는 표를 만들기 위해 사용합니다.
+         table은 표의 행을 설정하는 tr 요소, 그리고 열의 제목을 지정하는 th, 
+         그리고 열 데이터를 지정하는 td를 포함합니다.
+         <table> <tr><td><td></tr></table> 표 - 행 - 열 순으로 마크업
+         
+         테이블 빨리 작성하는 법 'table>tr*3>td*4'
+
+ rowspan : 행 병합       <th rowspan="2">공연시간</th>
+ colspan : 열 병합       <td colspan="2">미취학 아동 일반 요금의 50%</td>
+
+ 
+ 
+ 5. 입력양식 (form)
+  
+   form : form요소는 웹 서버에 정보를 제출하기 위한 양식을 정의하는 요소입니다.
+
+   -  action 전송한 정보를 처리할 /URL (ex_ 로그인 정보를 입력받은후 처리해줄 서버주소)
+   -  name 고유한 양식의 이름
+   -  method 서버로 전송할 HTTP 방식 /GET(검색할때 쓰는 방식), POST(보안 할때 쓰는 방법)
+   -  autocomplete 사용자가 이전에 입력한 값으로 자동완성 기능을 사용할 것인지 여부/on, off 
+   -  novalidate 서버로 전송시 양식 데이터의 유효성을 검사하지 않도록 지정./논리값(Boolean)
+       * 모든 사이트에는 기본적으로 논리검사가 지정되어 있습니다.
+   
+   -  target 서버로 전송 후 응답받을 방식을지정./ _self, _blan
+
+   input : input 요소는 사용자에게 입력 받을 데이터 양식을 지정합니다. 
+           input은 빈 태그입니다.
+
+    * 빈태그 : hr, br, img, input, meta       
+
+    -  type 입력받을 데이터의 종류 / 별도 정리
+
+
+               input의 type속성들
+
+                text / 일반 텍스트 
+                password / 비밀번호 가려지는 양식
+                email / 이메일
+                search / 검색
+                checkbox / 체크박스
+                radio / 라디오 버튼 / 같은 name 속성 그룹 내 하나만 선택 가능
+                number / 숫자
+                button / 일반 버튼 / <button>처럼 사용
+                submit / 서버 전송 버튼 / form내용을 서버로 전송
+                reset / 초기화 / form내부 양식 모두 제거
+                file / 파일
+                range / 범위 컨트롤 / min, max, step, value 속성 사용
+                hidden / 보이지 않지만 서버로 전송할 내용 / value속성으로 값을 지정
+
+    -  value 양식의 초기값 <게시판 글수정, 회원정보수정 등 초기값이 필요한 경우에 활용.>
+    -  disabled 양식을 비활성화 / 논리값 <수정이 불가능하게함. ex)링크된 품절상품 클릭 금지>
+    -  placeholder 사용자가 입력할 값의 힌트 / text / type이 text, search, tel, url,email일 경우만
+    -  checked 양식이 선택된 상태로 시작 / 논리값 / type이 checkbox, radio일 경우만 
+        (기본적으로 많이 선택하는 사항을 나열할때 ex 국밥집 온라인 주문시 공기밥추가 여부)
+    -  name 양식의 이름
+    -  readonly 수정 불가한 읽기 전용 / 논리값 = disable
+
+   label : label 요소는 입력양식의 제목 역할을 합니다.
+           *input의 입력 범위의 시작을 더 넓게 만들어준다.
+
+           for 라는 속성을 사용하여 입력양식과 연결할 수 있습니다.
+    
+   textarea : textarea는 여러 줄의 일반 텍스트 양식을 만듭니다.
+              rows속성으로 초기에 보여줄 행 수를 지정할 수 있습니다.
+
+   fieldset, legend : 같은 목적의 양식을 그룹화(fieldset) 하여 제목(legend) 을 지정합니다.
+   (거의안씀. 중요x)
+
+   selct, datalis, optgroup, option
+    : 옵션(option)의 선택메뉴(select)나 자동완성(datalist)를 제공합니다.
