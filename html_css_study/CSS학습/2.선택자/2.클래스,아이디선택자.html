@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .orang{
+            color: orange;
+        }
+        #big{
+            font-size: 1.5em;
+        }
+        .reverse{
+            transform: rotate(180deg);
+            width: fit-content;
+        }
+        .shadow{
+            text-shadow: 1px 1px 6px #333;
+        }
+
+        p, span{
+            font-style: italic;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+
+        .orang, #big{
+            
+        }
+    </style>
+
+</head>
+<body>
+    <!-- div>(ul>li*3)+div+p+spn -->
+    <div class="shadow">
+        <!-- 전체 음영을 넣고 싶을때 전체태그 말고 클래스태그로 가능. 조상태그에 음영클래스를 넣는다.  -->
+        <ul>
+            <li>사과</li>
+            <li class="reverse">딸기</li>
+            <li class="orang reverse" id="big">오렌지</li>
+            <!-- id="big" 은 li 오렌지에서만 쓸수 있음. id는 유일해야함. -->
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orang">오렌지</span>
+
+        <!-- h1.reverse#small -->
+        <h1 class="reverse" id="small">클래스,아이디 적용</h1>
+
+        <!-- h2.shadow.reverse -->
+        <h2 class="shadow reverse">클래스 2개 적용</h2>
+
+        <!-- li 오렌지와 spn 오렌지만 새깔을 바꾸고 싶을때 태그선택자x, 클래스 선택자 사용 -->
+    </div>
+</body>
+</html>
