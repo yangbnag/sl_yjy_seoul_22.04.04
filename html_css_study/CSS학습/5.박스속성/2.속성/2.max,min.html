@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 50px;
+            height: 300px;
+            border: 4px solid blue;
+            background: skyblue;
+        }
+        .child{
+            background:orange;
+            height: 200px;
+            max-width: 500px;
+            min-width: 200px;
+        }
+        /* 최대 길이의 제한 max-width, width의 기본값은 부모태그의 100% 이지만
+        제한을 걸어놓으면 부모width가 커져도 제한값까지만 커짐
+        min-width는 반대로 생각하면 되며, max,min-height도 같은 개념임. */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

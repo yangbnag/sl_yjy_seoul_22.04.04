@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: gray;
+        }
+
+        .box {
+            background: orange;
+            width: 70%;
+            /* width의 기본값은 부모태그의 100%! */
+            height: 80vh;
+            font-size: 50px;
+            /* width, height의 기본값 auto로 설정하면 기본값, 안쓴거와 똑같음*/
+        }
+        .box2{
+            background: tomato;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">안녕
+        <div class="box2"></div>
+    </div>
+    <!-- 컨텐츠의 크기만큼 height가 설정됨. -->
+
+</body>
+
+</html>

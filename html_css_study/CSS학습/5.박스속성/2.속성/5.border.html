@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            margin-top: 10px;
+            background: gray;
+
+        }
+        .box1 {
+            background: tomato;
+            border-width: 10px;
+            border-style: solid;
+            border-color: orange;
+            box-sizing:border-box;
+        }
+        .box2 {
+            background: aqua;
+            border: 5px inset yellow;
+            box-sizing:border-box;
+
+        }
+        .box3{
+            background: orange;
+            border-right: 4px solid yellow;
+            border-top: 4px dashed green;
+            border-left: 4px dotted skyblue;
+            border-bottom-color: violet;
+            border-bottom-style: double;
+            border-bottom-width: 4px;
+   
+        }
+            
+            /* 테두리에는 3가지 속성이 있다.
+            선의 굵기 border-width
+            선의 모양 border-style  
+            선의 색상 border-color           */
+            
+            /* border도 padding과 동일하게 박스 크기에 영향을 준다.
+            box-sizing:border-box;을 사용하여 박스 크기를 고정 시킬수 있다.*/
+        
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+</html>
