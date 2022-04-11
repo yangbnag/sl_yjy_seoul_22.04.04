@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 40px;
+        }
+
+        .c1 {
+            color: #f00;
+            /* 실무에서는 0~f 까지의 16진수로 색깔을 표현해야함.  */
+        }
+
+        .c2 {
+            color: rgb(58, 200, 193);
+            /* 16진수로 10진수로 바꾼 rgb함수 */
+
+        }
+
+        .c3 {
+            color: rgba(58, 200, 193, 0.5, 0.8);
+            /* 추가적으로 투명설정도 가능 */
+        }
+
+        #btn {
+            width: 120px;
+            height: 240px;
+            font-size: 1.5em;
+            background: rgb(54,228,77);
+        }
+        #btn:hover{
+            background: rgba(54,228,77,0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">hello</div>
+    <div class="c2">hello</div>
+    <div class="c3">hello</div>
+
+    <button id="btn">click!</button>
+</body>
+
+</html>

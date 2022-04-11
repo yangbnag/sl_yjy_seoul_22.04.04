@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        #hello {
+            background: red;
+            font-size: 2em;
+            color: yellow;
+            padding: 20px;
+            display: block;
+            height: 300px;
+            /* inline속성을 가진 span을 블록속성으로 바꿀수 있다. */
+        }
+        /* span은 inline속성을 가지며 display:inline; 이 기본값으로 깔려 있다. */
+
+        a{
+            background: yellowgreen;
+            width: 100px;
+            height: 100px;
+            display:inline-block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* inline속성을 가진 a태그를 블록으로 바꾸는 이유는 블록영역 전체를 눌르면 a태그에
+            연결된 링크로 이동할수 있는 편리함 때문이다. */
+        }
+        .box input{
+          height: 50px;
+          width: 100px;
+        }
+
+        .no{
+            /* display: none; */
+            /* 요소를 안보이게 설정하는 display none! */
+
+            opacity:0.3;
+            /* 투명도 설정: 0%  - 0에 가까울수록 투명 최대값 1 */
+
+            /* display none과 opacity0의 차이점은 완전히 없애느냐 숨기느냐 차이임.
+            none은 없애고, opacity는 자리는 유지하고 안보이게 숨긴다. */
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <span id="hello">안녕하세요!</span>
+
+    <a href="#">회원가입</a>
+    <a href="#">로그인</a>
+
+    <div class="box">
+    <input type="text" value="1">
+    <input type="text" value="2">
+    <input class="no" type="text" value="3">
+    <input type="text" value="4">
+    <input type="text" value="5">
+</div>
+
+    <!-- input의 기본 display는 inline 속성을 가지지만 display:inline-block 속성이다. -->
+
+    <script>
+        hello.onclick= e => {
+            hello.style.display = 'none';
+        };
+        // none과 스크립트가 같이 쓰이는 예시
+        // hello의 태그인 빨간배경의 안녕하세요!를 클리하면 none으로 인해 사라진다.
+        // 사라진 이후에도 소스검사에서는 확인이 가능한 것을 확인 할수 있다.
+    </script>
+
+</body>
+
+</html>

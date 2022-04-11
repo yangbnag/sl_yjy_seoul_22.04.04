@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid red;
+            margin: 20px;
+
+            /* 버그를 잡기위해 버그를 사용한 케이스로 실제 overflow 기능이 필요할 때 사용하지 못하는 문제점이 있음 */
+            /* overflow: hidden; */
+        }
+
+         /* 존재하지 않은 클래스 입력 후 가상클래스 after 입력 후 해제하고 싶은 곳에 
+         최초 입력한 존재하지 않은 클래스를 입력 */
+          .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .container2 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid blue;
+            margin: 20px;
+        }
+
+        .container3 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid green;
+            margin: 20px;
+        }
+
+
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background: yellowgreen;
+            border-radius: 20px;
+
+            float: left;
+
+            /* float 버그
+            1. 빈 형제 요소를 추가하여 clear속성 사용
+            2. 부모 요소에 overflow: hidden; 적용
+            3. 부모요소에 가상 클래스를 추가하여 해제 */
+        }
+
+        .cbox {
+            /* clear:both; */
+            /* 구조적으로 필요없는 박스가 하나추가 된 것이 문제점이 되어 잘 사용되어지지 않는다. */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <!-- <div class="cbox"></div> -->
+    </div>
+
+    <div class="container2 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </div>
+
+    <div class="container3 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </div>
+
+</body>
+
+</html>
