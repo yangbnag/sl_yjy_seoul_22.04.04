@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .root{
+            width: 600px;
+            height: 500px;
+            border: 4px dashed orange;
+            padding: 100px;
+            font-size: 30px;
+            position: relative;
+    
+
+            
+        }
+
+        .parent{
+            width: 400px;
+            height: 300px;
+            border: 4px dashed blue;
+            padding: 50px;
+            position: relative;
+
+            /* absolute는 기본적으로 body를 기준으로 이동 하지만 부모요서에 position이 적용되면
+            position이 적용된 가장 가까운 부모를 기준으로 이동한다. */
+            
+        }
+
+        .child{
+            width: 120px;
+            height: 80px;
+            border: 4px dashed red;
+            background: tomato;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .abs {
+            position: absolute;
+            top: 50px;
+            right: 30px;
+        }
+
+        .center-box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform:translate(-50%, -50%);
+            /* 박스 x,y축 중앙정렬             
+            margin은 x축 중앙정렬이 가능하지만 정중앙 정렬이 불가능 하다. 그때 사용하는 방법
+            
+            중앙정렬은 position을 가진 제일 가까운 부모를 기준으로 한다.*/
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="root">
+        <div class="parent">
+            <div class="child center-box">1</div>
+            <div class="child abs">2</div>
+            <div class="child">3</div>
+        </div>
+    </div>
+</body>
+</html>

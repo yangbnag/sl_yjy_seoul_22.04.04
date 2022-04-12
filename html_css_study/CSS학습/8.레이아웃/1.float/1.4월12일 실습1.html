@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        nav {
+            width: 1166px;
+            border: 1px solid #000;
+            background: yellow;
+            margin: 20px 30px;
+            
+
+
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+
+
+        .gnb,.tnb {
+
+            height: 70px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            
+            
+
+        }
+
+        .gnb {
+            width: 570px;
+            margin-right: 10px;
+            background: green;
+            float: left;
+
+            
+        }
+
+        .tnb {
+            
+            width: 346px;
+            background: gray;
+            float:right;
+
+            
+
+
+        }
+
+        .gnb a{
+            width: 100px;
+            margin-left: 10px;
+        }
+
+        .tnb a{
+            width: 100px;
+            margin-left: 10px;
+            
+        }
+
+        .gnb a:first-child{
+            margin-left: 10px;
+        }
+
+        a {
+           
+            height: 50px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            float: left;
+            margin-right: 0px;
+            text-decoration: none;
+            margin-top: 10px;
+            background: white;
+
+            /* text 정중앙 정령(x축,y축) */
+            text-align: center;
+            /*(x축)*/
+            line-height: 70px;
+            /* y축 : 줄높이를 세로길이와 동일하게*/
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="clearfix">
+        <ul class="gnb">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BOARD</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">JOIN</a></li>
+        </ul>
+        <ul class="tnb">
+            <li><a href="#">검색</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

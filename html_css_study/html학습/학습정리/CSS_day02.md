@@ -94,17 +94,3 @@ border
   border-style 선의 종류 none
   border-color 선의 색상 blac
 
-box-sizing
-padding, border에 의해 박스 사이즈가 조절되는 경우를 제어하기 위해 사용.
-
-content-box(기본값): 박스 사이즈에 padding, border가 더해짐
-border-box: 박스 사이즈에 padding, border를 더하지 않음
-
-display
-요소가 화면에 보여지는 특성을 지정.
-
-block: 블록 요소를 지정
-inline: 인라인 요소를 지정
-inline-block: 인라인 요소이면서 가로, 세로 너비 지정 가능한 요소로 지정
-none: 요소를 사라지게 함
-기타: flex, grid 등
