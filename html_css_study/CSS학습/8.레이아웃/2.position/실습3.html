@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +7,90 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <style>
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear :both;
+        }
+
+        .back{
+            margin: 50px auto;
+            width: 90%;
+            height: 700px;
+            background: gray;
+            border: 2px solid #000;
+            position: relative;
+
+        }
+
+        .back .left{
+            width: 30%;
+            height: 600px;
+            background: white;
+            border: 1px solid #000;
+
+            
+        }
+
+        .back .left .box{
+            width: 35%;
+            height: vh;
+            background: blue;
+            border: 1px solid #000;
+            margin: 0   auto 2px;
+            color:white;
+            font-weight: bold;
+            padding-left: 10px;
+            font-size: 12px;
+            line-height: 2vh;
+            box-sizing: border-box;
+        }
+
+
+        .back .left .box:first-child{
+            margin-top: 50px;
+        }
+
+        .right{
+            width: 70%;
+            height: 600px;
+            background: lightgray;
+            border: 1px solid #000;
+            float:right;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+        
+        .back .under {
+            width: 100%;
+            height: 100px;
+            background: #000;
+            border: 1px solid #000;
+            color:white;
+            font-weight: bold;
+            line-height: 100px;
+            padding-left: 15px;
+            box-sizing: border-box;
+
+        }
+
 
     </style>
 </head>
 <body>
-    <section class="back">
+    
+    <section class="back clearfix">
         <ul class="left">
-            <li class="box"></li>
-            <li class="box"></li>
-            <li class="box"></li>
-            <li class="box"></li>
+            <li class="box">COMPANY</li>
+            <li class="box">PRODUCT</li>
+            <li class="box">SERVICE</li>
+            <li class="box">COMMUNITY</li>
         </ul>
+        <div class="right"></div>
+        <div class="under">Copyright Allright Reserved.</div>
+        
     </section>
 </body>
 </html>
