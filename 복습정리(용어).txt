@@ -1,0 +1,41 @@
+Monday = Mon.
+Tuesday = Tue.
+Wednesday = Wed.
+Thursday = Thu.
+Friday = Fri.
+Saturday = Sat.
+Sunday = Sun.
+
+positon 중앙정렬
+
+            position:absolute;
+            left: 50px;
+            top: 50px;
+            transform: translate(-50%, -50%);
+   
+
+HTML
+
+요소 
+속성 / 값 : ex) <div "속성="값"> </div>
+부모요소와 자식요소 :
+
+head 의 대표적인 요소
+<meta> 
+<title> 
+<link>
+<script>
+<style>
+
+body
+
+<!DOCTYPE html> : 
+
+header :
+footer : 
+main :
+article : 
+section : 
+aside :
+nav :
+div :  

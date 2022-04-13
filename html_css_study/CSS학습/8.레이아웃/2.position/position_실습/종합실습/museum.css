@@ -1,0 +1,206 @@
+/* common style */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body {
+    background: gray;
+    margin: 100px auto;
+    width: 100%;
+    height: 3000px;
+    padding-left: 20%;
+}
+
+/* header style */
+
+header {
+    background: orange;
+    height: 10vh;
+    padding-top: 5px;
+    width: 70%;
+
+}
+
+header h1 {
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    font-weight: 700;
+    font-family: '견고딕', serif;
+    margin: 10px auto;
+    box-sizing: border-box;
+
+
+}
+
+header p {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+/* body style - firstbox_.listbox */
+
+.container {
+    background: white;
+    width: 70%;
+    
+}
+
+.container .top {
+    background: lightgray;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container .listbox div {
+    background: red;
+    height: 2.5vh;
+    padding: 10px 0 15px 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+
+}
+
+.container .listbox ul {
+    margin-top: 30px;
+    padding-left: 10px;
+}
+
+.container .listbox ul li {
+    margin: 15px 0;
+
+}
+
+.container .listbox ul li a {
+    color: black;
+}
+
+
+.container .listbox {
+    width: 15%;
+    float: left
+}
+
+.container .content .addcontent {
+    background: lightblue;
+    float: left;
+    width: 60%;
+
+}
+
+.container .content .lastcontent {
+    float: right;
+    width: 25%;
+}
+
+/* body style 2thbox_ .content.addcontent */
+
+.container .content .addcontent {
+    background: lightgray;
+}
+
+.container .content .addcontent h2 {
+    background: rgb(68, 68, 176);    
+    padding: 10px 0 10px 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: bold;
+    width: 95%;
+    height: 3vh;
+    margin: 0 auto;
+}
+
+.container .content .addcontent h2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.container .content .addcontent li {
+    padding: 10px;
+    margin: 10px;
+}
+.container .content .addcontent li:first-child{
+    height: 3vh;
+}
+.container .content .addcontent li:last-child{
+    height: 5vh;
+}
+
+
+/* body style 3thbox_ .content .lastcontent */
+
+.container .content .lastcontent ul {
+  
+    box-sizing: border-box;
+    margin: 10px 10px 30px 10px;
+}
+
+.container .content .lastcontent ul li{
+    margin: 10px;
+    font-size: 15px;
+}
+
+.container .content .lastcontent li:first-child{
+    color: gray;
+    font-weight: blod;
+    font-size: 20px;
+    
+}
+
+.container .content .lastcontent li:nth-child(2){
+    color: orange;
+    font-weight: blod;
+    font-size: 20px;
+    
+}
+
+.container .content .lastcontent li:last-child{
+    color: black;
+    font-weight: blod;
+    font-size: 20px;
+}
+
+.container .content .lastcontent .box {
+   
+    margin:20px 0 0 10px
+}
+
+.container .content .lastcontent .box h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    
+}
+
+.container .content .lastcontent .box p {
+    margin-bottom: 20px;
+}
+
+.container .content .lastcontent .box a {
+    color: black;
+    font-weight: 700;
+}
+
+/* footer */
+
+footer {
+    background: rgb(31, 13, 113);
+    color: white;    
+    width:  70%;
+    height: 5vh;
+}
+
+footer address {
+    text-align: center;
+    font-size: 17px;
+    line-height: 5vh;
+
+}
+
+footer address a{
+    color: white;
+}
