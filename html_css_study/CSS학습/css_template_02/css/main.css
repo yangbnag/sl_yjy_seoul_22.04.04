@@ -26,19 +26,149 @@ body {
 /* header style */
 
 header {
-    background: skyblue;
+    background: lightgray;
     width: 15%;
-    float : left;
+    height: 87vh;
+    float : left;    
+}
 
+header .logo {
+    /* background: pink; */
+    margin: 30px auto;
+    width: 90%;
     
 }
+
+header .logo img{
+   width: 100%;
+}
+
+header .menu {
+    /* background: lightgray; */
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+header .menu .navi li{
+    background: #222328;
+    padding: 20px;
+}
+
+header .menu .navi li a{
+    color:#fff;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+}
+
+header .menu .navi li a:hover {
+    opacity: 0.4;
+}
+
+
 
 /* container style */
 .container {
     background: orange;
-    width: 83%;
-    margin-left: 2%;
+    width: 84%;    
     float : right;
+}
+
+.container .center-box{
+    background: gray;    
+}
+
+/* imgslide */
+
+.container .imgslide {
+background: yellowgreen;
+position: relative;
+}
+
+.container .imgslide img{
+    width: 100%;
+}
+
+.container .imgslide span {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 50px;
+    display: block;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(40, 40, 40, 0.4);
+
+}
+
+/* contents style */
+
+.container .contents {
+
+    background: aqua;
+    width: 38.5%;
+    margin-left: 1%;
+    float:left;
+    position: relative;
+}
+
+.container .contents .list {
+    background: yellow;
+    border: 1px solid #000;
+    width: 150px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    
+}
+
+.container .contents .title1 {
+    position:absolute;
+    top: 0;
+    left: 190px;
+    background: gray;
+}
+
+.container .contents .notice {
+    /* background: black; */
+}
+
+.container .contents .notice li {
+    border: 1px solid #000;
+    background: orange;
+}
+
+
+
+/* banner style */
+.container .banner {
+    background: tomato;
+    width: 38.5%;
+    margin-left: 1%;
+    float:left;
+
+}
+
+.container .banner img{
+    width: 100%;
+}
+
+.container .direct {
+    background: violet;
+    width: 20%;
+    margin-left: 1%;
+    float:right;
+}
+
+.container .direct img{
+    width: 100%;
 }
 
 /* footer style */
