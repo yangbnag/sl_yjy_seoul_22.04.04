@@ -39,3 +39,17 @@ section :
 aside :
 nav :
 div :  
+
+ol
+ul
+li
+
+a
+href
+abbr
+b
+mark
+em
+strong
+span
+br

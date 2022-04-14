@@ -1,0 +1,256 @@
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+a {
+    text-decoration: none;    
+    
+}
+.container {
+    background: white;
+    margin: 100px;
+
+}
+
+/* common style end */
+
+.container .side-menu {
+    
+    width: 25%;
+    float:left;
+    background: #000;
+    
+}
+.container .side-menu h3 {
+    
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    background: white;
+
+}
+
+.container .side-menu .side-list li{
+    
+    box-sizing: border-box;
+    background: black;   
+    
+    box-sizing: border-box;
+    
+    text-align: center;
+}
+
+.container .side-menu .side-list li a{
+     
+    color: white;
+    font-weight: bold;  
+    display: block; 
+    padding: 10px 0; 
+    
+}
+
+.container .side-menu .side-list li:hover {
+    background: red;
+     
+}
+
+.container .side-menu .side-list a:hover{
+    color: yellow;
+}
+
+/* side-menu end */
+
+.main-menu {
+    
+    float : right;
+    width: 75%;
+    position: relative;
+}
+
+.main-menu .box1 {
+    background: url('../images/img1.jpg')  no-repeat center  / cover;
+    height: 50vh;    
+    
+}
+
+.main-menu .box1 .top {
+    color : white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+
+}
+
+/* main-menu box1 end */
+
+.main-menu a {
+    color : white;
+}
+
+.main-menu h5{
+    color : white;
+    background: #000;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}    
+    
+ 
+.main-menu .box2 {
+
+    float : left;
+    width: 40%;       
+}
+
+.main-menu .box2 table{
+    width: 100%;
+   
+}
+.main-menu .box2 table tr{    
+    line-height: 1.5;
+}
+
+.main-menu .box2 table td:last-child{
+    text-align: right;
+}
+
+.main-menu .box2 table tr:nth-child(2n) {
+    background: gray;
+}
+
+.main-menu .box2 table tr:nth-child(2n+1) {
+    background: lightgray;
+}
+
+/* main-menu box2 end */
+
+    
+
+.main-menu .box3 {
+   
+    float : left;
+    width: 40%;
+    padding: 0 0 10px 10px;
+    box-sizing: border-box;
+    
+}
+
+.main-menu .box3 .smallbox {
+   
+    float : left;
+    width: 95%;
+    height: 100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.main-menu .box3 .smallbox .smallpicture {
+    width: 30%;
+    height: 100px;
+   
+    border: 1px solid #000;
+    float : left;
+    margin-right: 2.6%;
+}
+
+.main-menu .box3 .smallbox .icon-one {
+    background: url('../images/icon1.jpg') no-repeat center / cover ;
+}
+.main-menu .box3 .smallbox .icon-two {
+    background: url('../images/icon2.jpg') no-repeat center / cover ;
+}
+.main-menu .box3 .smallbox .icon-three {
+    background: url('../images/icon3.jpg') no-repeat center / cover ;
+}
+
+
+.main-menu .box4 {
+   
+    float : right;
+    width: 20%;
+    height: 20vh;    
+}
+
+.main-menu .box4 {
+    background: url('../images/contents.jpg') no-repeat center / cover ;
+    position: relative;
+}
+
+.main-menu .box4 .bottom {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* main-menu box4-end */
+
+footer {
+    background: gray;
+    margin-top: 180px;
+    height: 80px;
+}
+
+footer p{
+    display: block;
+    width: 50%;
+    float :left;
+    margin: 30px 0 0 300px 
+    
+
+}
+
+.lastbox {
+    width: 150px;
+    height: 80px;
+    
+    float : right;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.l-box {
+    
+    width: 42px;
+    height: 50px;
+    border: 1px solid #000;
+    float : left;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.facebook-picture {
+    background: url(../images/sns1.jpg)no-repeat center / cover;
+}
+
+.twiter-picture {
+    background: url(../images/sns2.jpg)no-repeat center / cover;
+}
+
+.instar-picture {
+    background: url(../images/sns3.jpg)no-repeat center / cover;
+}
+
+select {   
+    width: 150px;
+}
+    

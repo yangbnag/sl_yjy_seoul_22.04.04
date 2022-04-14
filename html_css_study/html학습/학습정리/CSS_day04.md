@@ -28,3 +28,5 @@ stack order
 1. static을 제외한 position속성의 값이 있을 경우 가장 위에 쌓임
 2. position이 존재한다면 z-index속성의 숫자값이 높을 수록 위에 쌓임
 3. position이 존재하고 z-index속성의 숫자값이 같다면 나중에 작성한 요소일수록 위에 쌓임
+
+

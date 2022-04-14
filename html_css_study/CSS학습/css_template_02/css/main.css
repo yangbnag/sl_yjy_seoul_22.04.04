@@ -1,0 +1,49 @@
+/* reset */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* common style */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body {
+    background: #fff;
+    font-family: '맑은고딕', sans-serif;
+    color: #222328;
+    font-size: 20px;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* header style */
+
+header {
+    background: skyblue;
+    width: 15%;
+    float : left;
+
+    
+}
+
+/* container style */
+.container {
+    background: orange;
+    width: 83%;
+    margin-left: 2%;
+    float : right;
+}
+
+/* footer style */
+
+footer { 
+    background: yellowgreen;   
+    
+}
