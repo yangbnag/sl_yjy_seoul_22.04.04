@@ -1,5 +1,7 @@
 &copy;
 
+width: fit-content;
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
 
 /* 인라인태그에 float, position 속성을 쓰는순간 자동으로 display:block;이 부여됨 */
