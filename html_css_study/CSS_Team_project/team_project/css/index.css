@@ -1,3 +1,8 @@
+/* 구글 웹폰트 로딩 */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+
 /* common style */
 a {
     color: inherit;
@@ -14,7 +19,7 @@ body {}
 
 #wrapper {
     margin: 30px auto;
-    width: 50%;
+    width: 70%;
     /* background: orange; */
 }
 
@@ -73,7 +78,7 @@ header .yg-family .toplist {
 
 header .yg-family .toplist ul li {
     /* background: indianred; */
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 700;
     /* border: 2px solid #000; */
     width: fit-content;
@@ -99,6 +104,10 @@ header .yg-family .toplist ul li a:hover {
     width: 100%;
 }
 
+.contents .slide-img img {
+    width: 100%;
+}
+
 .contents .centerlist {
     /* background: orange;     */
 }
@@ -113,6 +122,7 @@ header .yg-family .toplist ul li a:hover {
     /* border: 1px solid #000; */
     width: 23.5%;
     margin-right: 2%;
+    height: 180px;
 
 }
 
@@ -228,72 +238,98 @@ header .yg-family .toplist ul li a:hover {
     padding-top: 3px;
 }
 
-.contents .centerlist .widelist1 .contentsbox1 .mv ul {
-    width: 80%;
-    margin: 30px auto 110px;
-}
 
 .contents .centerlist .widelist1 .contentsbox1 .mv li {
-
     width: 45%;
     float: left;
-
+    /* background: yellow; */
 }
 
-.contents .centerlist .widelist1 .contentsbox1 .mv li:first-child {
 
+
+.contents .centerlist .widelist1 .contentsbox1 .mv li:first-child {
     width: 50%;
     margin-right: 5%;
 
 }
 
-.contents .centerlist .widelist1 .contentsbox1 .mv li:last-child {
-    font-size: 10px;
+.contents .centerlist .widelist1 .contentsbox1 .mv img {
+    width: 120px;
+    height: 100px;
+    margin: 10px 5px 20px 5px;
+    /* background: yellow; */
+
+
 }
+
+
 
 .contents .centerlist .widelist1 .contentsbox1 .mv .mv-detail {
     color: #000;
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
     margin-bottom: 5px;
     text-align: left;
+    line-height: 1.4;
 }
 
 .contents .centerlist .widelist1 .contentsbox1 .mv .mv-name,
 .day {
+    margin-top: 10px;
     text-align: left;
     color: gray;
+    font-size: 15px;
+    line-height: 0.7;
 }
 
-
-
-
-
-.contents .centerlist .widelist1 .contentsbox1 .news ul {
-    /* background: yellow; */
-    width: 80%;
-    margin: 0 auto 110px;
+.contents .centerlist .widelist1 .contentsbox1 .news {
+    /* background: pink; */
 }
 
 .contents .centerlist .widelist1 .contentsbox1 .news li {
-    width: 45%;
+    /* background: orangered; */
+    width: 43%;
     float: left;
 }
 
-.contents .centerlist .widelist1 .contentsbox1 .news li .news-detail {
-    color: #000;
-    padding-top: 20px;
-    line-height: 1.3;
+.contents .centerlist .widelist1 .contentsbox1 .news li:first-child{
+    width: 120px;
+    height: 100px;
+    margin: 10px 10px 30px 20px;
+}
+
+.contents .centerlist .widelist1 .contentsbox1 .news li img {
+    width: 100%;
+    height: 100%;
+}
+
+.contents .centerlist .widelist1 .contentsbox1 .news li:last-child{
+    margin: 10px 0px 30px 0px;
+    height: 100px;
+}
+
+.contents .centerlist .widelist1 .contentsbox1 .news .news-detail{
+    font-size: 16px;
+    font-weight: 700;
     text-align: left;
-    font-size: 12px;
+    line-height: 1.1;
+    color: #000;
+    /* background: #fff; */
 }
 
-.contents .centerlist .widelist1 .contentsbox1 .news li:first-child {
-    margin-right: 5%;
+.contents .centerlist .widelist1 .contentsbox1 .news .day{    
+    text-align: left;
+    color: gray;    
+    font-size: 15px;  
+    /* background: #000; */
+    margin-top: 5px;
 }
 
-.contents .centerlist .widelist1 .contentsbox1 .news li:last-child {
-    font-size: 10px;
-}
+
+
+
+
 
 
 
@@ -357,13 +393,13 @@ header .yg-family .toplist ul li a:hover {
 }
 
 .contents .centerlist .widelist2 .audition {
-    width: 20%;
+
     /* background: yellow; */
 }
 
 .contents .centerlist .widelist2 .sub {
 
-    padding: 15px 20px 0 20px;
+    padding: 15px 20px 0 5px;
     box-sizing: border-box;
     position: relative;
 
@@ -385,26 +421,29 @@ header .yg-family .toplist ul li a:hover {
     float: left;
     box-sizing: border-box;
     width: 12.5%;
-    margin-right: 2%;
+    margin-right: 3.5%;
     height: 100px;
 }
 
-.contents .centerlist .widelist2 li:last-child {
-    width: 25%;
-    margin-right: 0%;
-    font-size: 10px;
+.contents .centerlist .widelist2 li:nth-child(odd){
+    margin-right: 3%;
 }
 
-.contents .centerlist .widelist2 li:last-child .audition {
+
+.contents .centerlist .widelist2 li:last-child {
     background: yellow;
-    width: 100%;
+    width: 20%;
     padding: 10px;
+    float: left;
+    font-size: 10px;
+    margin-right: 0%;
+
 
 }
 
 .contents .centerlist .widelist2 li:last-child .audition strong {
     display: block;
-    background: gray;
+    /* background: gray; */
     font-weight: 700;
     font-size: 13px;
     margin-bottom: 5px;
@@ -413,7 +452,7 @@ header .yg-family .toplist ul li a:hover {
 .contents .centerlist .widelist2 li:last-child .audition b {
     display: block;
     /* background: blue; */
-
+    margin-top: 10px;
     font-size: 12px;
     color: gray;
 }
@@ -431,6 +470,7 @@ header .yg-family .toplist ul li a:hover {
     position: absolute;
     bottom: 0;
     font-size: 12px;
+    width: 100px;
 
 }
 
@@ -455,7 +495,7 @@ header .yg-family .toplist ul li a:hover {
 .contents .centerlist .contents-end .copy {
     background: yellow;
     float: left;
-    margin: 20px 0 20px 450px;
+    margin: 20px 0 20px 350px;
     font-size: 13px;
     color: gray;
 
@@ -531,16 +571,16 @@ footer .end-box .lisence-copy-box {
 
     background: pink;
     width: 50%;
-    float: left;   
-    
-    
+    float: left;
+
+
 
 }
 
-footer .end-box .lisence-copy-box li{
-font-size: 12px;
-background: gray;
-font-size: 8px;
+footer .end-box .lisence-copy-box li {
+    font-size: 12px;
+    background: gray;
+    font-size: 8px;
 
 
 }
@@ -548,8 +588,9 @@ font-size: 8px;
 footer .end-box .lisence-copy-box .img-log {
     float: left;
     width: 15%;
-    
+
 }
+
 footer .end-box .lisence-copy-box .img-log img {
     width: 100%;
 }
@@ -558,11 +599,11 @@ footer .end-box .lisence-copy-box ul {
     float: left;
     width: 78%;
     line-height: 1.7;
-    box-sizing: border-box;  
-    margin-right: 1%;  
+    box-sizing: border-box;
+    margin-right: 1%;
     margin-left: 1%;
     margin-top: 5px;
-   
+
 }
 
 footer .end-contents-list {
@@ -576,22 +617,22 @@ footer .end-contents-list li {
     font-size: 8px;
     border: 1px solid #000;
     /* width: fit-content; */
-    margin-left: 20px;   
+    margin-left: 20px;
     position: relative;
 }
 
-footer .end-contents-list li:first-child{
+footer .end-contents-list li:first-child {
     margin-left: 95px;
 }
 
-footer .end-contents-list li span{
+footer .end-contents-list li span {
     margin-left: 3px;
     background: red;
     color: white;
 }
 
 
-footer .end-contents-list li::before{
+footer .end-contents-list li::before {
     content: '';
     display: block;
     width: 5px;
@@ -601,10 +642,10 @@ footer .end-contents-list li::before{
     border-radius: 50%;
     position: absolute;
     left: -10px;
-    top: 3px;  
+    top: 3px;
 }
 
-footer .end-contents-list li:last-child{
+footer .end-contents-list li:last-child {
     color: darkred;
     font-weight: 700;
 }
@@ -618,6 +659,3 @@ footer select {
     font-size: 0.5em;
     width: 130px;
 }
-
-
-
