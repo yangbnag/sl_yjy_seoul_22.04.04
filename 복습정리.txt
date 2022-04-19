@@ -20,6 +20,13 @@ background: rgba(40,40,40,0.3); : 박스 투명도 설정 (rgba 중에 a가 투�
     top: 50%;
     transform: translateY(-50%);
 
+[텍스트 중앙정렬]
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+
 header .logo img {width: 100%;} : 로고 태그 블록에 딱 맞게 설정하는 방법
 
 a{  color : inherit ;  text-decoration: none; } : a태그 전체적으로 리셋하는 방법
@@ -137,3 +144,25 @@ hr : 문단의 분리를 위해 설정함. hr은 빈태그(empty tag)임.
 empty tag : 닫는 태그를 쓰지 않는 태그 ex) <hr> 이렇게 닫는 태그 없이 단독 사용.
 
 
+
+flex-direction : Items의 주 축(main-axis)의 방향을 설정.
+
+row : Items를 수평축(왼쪽에서 오른쪽으로) 표시 (기본값)
+row-reverse : Items를 row의 반대 축으로 표시
+column : Items를 수직축(위에서 아래로) 표시
+column-reverse : Items를 column의 반대 축으로 표시
+
+
+flex-wrap : items의 줄 바꿈을 설정.
+
+nowrap : 모든 Items를 한 줄에 표시 (기본값)
+wrap : Items를 여러 줄로 묶음
+wrap-reverse : Items를 wrap의 역 방향으로 여러 줄 로 묶음
+
+justify-content : 주 축(main-axis)의 정렬 방법을 설정
+
+flex-start : Items를 시작점부터 정렬 (기본값)
+flex-end : Items를 끝점부터 정렬
+center : Items를 가운데 정렬
+space-between : 시작 Item은 시작점에, 마지막 Item은 끝점에 정렬되고 나머지 Items는 사이에 고르게 정렬
+space-around : Items를 균등한 여백을 포함하여 정렬
