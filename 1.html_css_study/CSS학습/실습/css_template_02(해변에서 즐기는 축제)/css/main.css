@@ -304,26 +304,3 @@ footer .bottombox .copy {
 
 }
 
-/* 반응형 레이아웃 작업 */
-/* 노트북 해상도 (1599px 이하) */
-@media screen and (max-width: 1599px) {
-    
-    header .inner-header {
-        width: 95%;
-    }
-    header .inner-header .gnb {
-        margin-left: 50px;
-    }
-    header .inner-header .gnb li {
-        margin-right: 40px;
-    }
-
-    section.about ul,
-    section.innovation .img-box,
-    section.me ul.list,
-    section.sns ul,
-    footer .inner {
-        width: 95%;
-    }
-
-}
