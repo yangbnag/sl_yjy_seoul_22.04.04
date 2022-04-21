@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+.hi {
+    background: #000;
+}
+    </style>
 </head>
 <body>
 
@@ -32,7 +37,7 @@
         <input type="number" value="1" min="5" max="10"> <br> <!-- 숫자말고 입력이 안됨 -->
     
         
-        <input type="hidden" name="abc" value="메롱"> <!-- 사용자 몰래 서버로 전송할 데이터 abc = 메롱 -->
+        <input class="hi" type="hidden" name="abc" value="메롱"> <!-- 사용자 몰래 서버로 전송할 데이터 abc = 메롱 -->
 
         <button type="button">그냥버튼</button>
         <!-- 그냥버튼 : 기능이 없고 개발자가 기능을 넣어서 쓰는 버튼 -->

@@ -1,3 +1,5 @@
+// A:65 , a:97 , 가 : 44032
+
 &copy;
 
 width: fit-content;

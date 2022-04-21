@@ -5,22 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .label-name{
+            background: yellow;
+        }
+
+        .box1 {
+            background: green;
+        }
+
+        .box2 {
+            background: gray;
+        }
+    </style>
 </head>
 <body>
 
      <form action="#">
           
-        <label>
+        <label class="label-name">
         # 이름 : <input type="text"> <br>
        </label>
         
-        <label> 
-            <input type="checkbox"> 자동 로그인
+        <label class="box1"> 
+            <input  type="checkbox"> 자동 로그인
         </label>
        
          
-            <input type="checkbox" id="remember"> 
-            <label for ="remember">아이디 기억하기            </label>
+            <input  type="checkbox" id="remember"> 
+            <label class="box2" for ="remember">아이디 기억하기 </label>
        
 
    
