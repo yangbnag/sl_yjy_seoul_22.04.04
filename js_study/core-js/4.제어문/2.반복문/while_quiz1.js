@@ -1,7 +1,7 @@
 
 
 //x ~ y 까지의 누적합 : total
-/*
+/* quiz 01
 var x = +prompt('1.정수를 입력하세요.') ;
 var y = +prompt('2.정수를 입력하세요.');
 var total = 0 ;
