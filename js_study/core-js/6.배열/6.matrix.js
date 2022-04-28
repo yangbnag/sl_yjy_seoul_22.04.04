@@ -1,12 +1,9 @@
-
-
-
 // 2차원 배열 - 배열의 요소가 또다시 배열인 경우
-var arr1 = [1,2,3];
-var arr2 = [4,5,6];
-var arr3 = [7,8,9];
+var arr1 = [1, 2, 3];
+var arr2 = [4, 5, 6];
+var arr3 = [7, 8, 9];
 
-var arr2d = [arr1, arr2, arr3, [10,11,12]]; // arr2d의 인덱스 수는 3 이다. (배열안에 들어있는 배열들이 요소가 된다.)
+var arr2d = [arr1, arr2, arr3, [10, 11, 12]]; // arr2d의 인덱스 수는 3 이다. (배열안에 들어있는 배열들이 요소가 된다.)
 
 console.log(arr2d.length);
 
@@ -29,18 +26,18 @@ console.log(arr2d);
 console.log('==============================');
 
 // 4, 5, 6 을 100, 200, 300 으로 수정 하고 싶을 때는
-arr2d[1] = [100,200,300];
+arr2d[1] = [100, 200, 300];
 console.log(arr2d[1]);
 
 
 
 
 console.log('==============================');
-arr2d.splice(0,1);
+arr2d.splice(0, 1);
 console.log(arr2d);
 
 console.log('==============================');
-arr2d[1].splice(1,1);
+arr2d[1].splice(1, 1);
 console.log(arr2d);
 
 console.log('==============================');
@@ -70,10 +67,39 @@ var arr2d_2 = [
     ['D', 'E', 'F']
 ];
 
-for(var arr of arr2d_2){ // 3 바퀴 (배열의 length 만큼 돈다.)
+for (var arr of arr2d_2) { // 3 바퀴 (배열의 length 만큼 돈다.)
     for (var s of arr) { // 3 바퀴 (배열의 length 만큼 돈다.)
         console.log(s); // 9 바퀴 돈다.
     }
 }
 
 // 2차원 배열 안에 있는 모든 내용을 출력하기 위해서는 중첩 루프가 작성된다.
+
+
+console.log(`=====================`);
+// 3차원 배열
+
+var arr3d = [
+    [
+        [1,2,3,4],
+        [5,6,7,8],
+    ],
+    [
+        [9,10,11,12],
+        [13,14,15,16]
+    ],
+    [
+        [17,18,19,20],
+        [21,22,23,24]
+    ]
+];
+
+console.log(`arr3d의 길이 :${arr3d.length}`);
+console.log(arr3d[0]);
+console.log(arr3d[1][1]);
+console.log(arr3d[0][1][2]);
+
+
+// 1차원 : 1명 학생의 4과목 시험점수를 저장한다.
+// 2차원 : 1학급의 5명의 4과목 시험정수를 저장한다.
+// 3차원 : 1학년의 3학급의 6명의 7과목을 저장한다.
