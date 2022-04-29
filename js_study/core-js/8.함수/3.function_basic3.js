@@ -35,6 +35,7 @@ function calcRangeTotal(x, y) { // x, y 는 매개변수(parameter)
     return total;
 }
 
+console.log(calcRangeTotal(1, 100));
 // 인수 (argument) : 함수를 호출할 때 함수에게 전달하는 값
 
 //1~10 까지의 총합
@@ -79,3 +80,15 @@ function sayHello(language = '한국어') {
 }
 console.log('===========================');
 sayHello();
+
+// 매개변수가 없는 함수
+
+function selectRandomPet() {
+    var pets = ['멍멍이', '야옹이', '짹짹이', '어흥이', '두껍이']
+
+    var rn = Math.floor(Math.random() * pets.length);
+    return pets[rn];
+
+}
+
+console.log(`선택된 동물:${selectRandomPet()}`);

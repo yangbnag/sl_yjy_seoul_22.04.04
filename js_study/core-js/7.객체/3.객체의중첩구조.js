@@ -41,7 +41,7 @@ var board = {
 
 
 // 원하는 데이터 추출하기
-// 이전버튼 활서화 여부 값 얻어내기.
+// 이전버튼 활성화 여부 값 얻어내기.
 console.log(board.prev);
 // 게시물 목록 안의 게시물 개수
 console.log(board.articleList.length);

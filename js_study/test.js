@@ -1,17 +1,28 @@
-var dog = {
-    name: '뽀삐',
-    kind: '진돗개',
-    age: 3,
-    injection:true,
-    favorite:['산책', '개껌']
-}; 
+ 
+     var user = {
+        kim1234:'kkk1234',
+        lee4567:'lll4567',
+        park9876:'ppp9876'
+    }
 
-var cat = {
-    name:'콩순이',
-    kind: '블랙러시안',
-    age: 2,
-    injection: false,
-    favortie: ['낮잠', '츄르', '캣타워']
-};
 
-console.log(dog.favorite.push('꼬리흔들기'));
+// var userID = 'kim1234';
+
+while(true){
+    var userID = prompt('ID를 입력하세요.');
+if (userID in user) {
+    var userPW = prompt('PW를 입력하세요');
+    if(user[userID] === userPW) {
+        alert('로그인 성공')
+        break;
+    } else {
+        alert('비밀번호가 틀렸습니다.');
+    }
+    
+}else {
+    alert('존재하지 않는 회원입니다.');
+}
+}
+
+
+
