@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="fruits">
+        <li>사과</li>
+    </ul>
+</body>
+
+<script>
+    const $fruits = document.getElementById('fruits');
+
+    function appendNewLi(fName) {
+        //1. 새로운 요소노드를 생성
+        //<li></li>
+        const $newLi = document.createElement('li');
+
+        //2. 생성된 노드에 텍스트 추가
+        // <li>바나나</li>
+        $newLi.textContent = fName;
+
+        //3. 새로운 노드를 추가
+        $fruits.appendChild($newLi); // 부모에게 자식을 추가한다고 명령.
+    }
+
+
+    fArr = ['바나나', '복숭아', '포도', '딸기'];
+    for (let txt of fArr) {
+        appendNewLi(txt);
+    }
+
+
+
+    //<li><a>레몬</a></li>
+
+    // li 추가
+    const $newLiremon = document.createElement('li');
+
+    $newLiremon.textContent = '';
+
+    $fruits.appendChild($newLiremon);
+
+    // a 추가
+
+    //<a></a>
+    const $newA = document.createElement('a');
+
+    //<a>레몬</a>
+    $newA.textContent = '레몬';
+
+    //부모에게 자식을 추가한다고 명령.
+    $fruits.children[5].appendChild($newA);
+
+    //===========================================================//
+
+    //연습1
+    const $practice = document.createElement('div');
+
+    $practice.textContent = '라면';
+
+    $fruits.appendChild($practice);
+
+    //연습2
+
+    const $practice1 = document.createElement('p');
+    $practice1.textContent = '양송이스프라면';
+    // const $practice1_1 = $practice1.trim();
+    $fruits.lastElementChild.appendChild($practice1);
+
+</script>
+
+</html>

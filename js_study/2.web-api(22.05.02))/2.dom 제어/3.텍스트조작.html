@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #greet span {
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="greet">
+        Hello <span>JavaScript!</span>
+    </div>
+
+    <script>
+        const $greet = document.getElementById('greet');
+        const text = $greet.textContent.trim(); // 엔터, 띄어쓰기 반영하여 추출
+        console.log(text);
+
+        // trim() : 문자열의 앞 뒤 공백 제거. 
+        // textContent 사용시 공백을 없애고 싶다면 trim()을 사용.
+
+        
+        //텍스트 수정
+        // $greet.textContent = 'Hello JS!'; // span 태그 사라짐
+
+        $greet.firstElementChild.textContent = 'JS!' // span 선택후 문자 수정
+
+        // $greet.textContent = '안녕 <span>JS!</span>'; 
+
+        $greet.innerHTML = '안녕 <span>JS!</span>'; 
+
+
+    </script>
+</body>
+</html>

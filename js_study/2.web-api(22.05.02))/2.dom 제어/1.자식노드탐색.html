@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+    <ul id="fruits">
+        <li class="apple">사과</li>
+        <li class="banana">바나나</li>
+        <li class="grape">포도</li>
+    </ul>
+
+    <div class="box">
+       
+    </div>
+
+    <script>
+        const $fruits = document.getElementById('fruits');
+        console.log($fruits.children);
+        
+        // 기존 노드의 모든 자식노드를 탐색, 텍스트노드 제외
+        const $childList = $fruits.children;
+        const $fristchild = $childList[0];
+        // const $fristchild2 = $fruits.firstchild;
+        const $fristchild2 = $fruits.firstElementChild;
+
+        
+        console.log($fristchild);
+        console.log($fristchild2);
+
+        const $lastchild = $childList[$childList.length-1];
+        console.log($lastchild);
+
+        const $lastchild2 = $fruits.lastElementChild;
+        console.log($lastchild === $lastchild2);
+        
+        const $box = document.querySelector('.box');
+        // 태그의 자식이 있는지 확인 하는 방법
+        console.log($box.hasChildNodes());
+        // 함수 이름이 has 나 isEmpty 이면 ()에 논리값을 나타낸다.
+        // p 태그가 없애고 다시 물어봐도 true가 나온다. 그 이유는 공백도 자식으로 인식을 하기 때문이다.
+
+        // ($box.hasChildNodes()); 이 함수를 쓰지 말고 아래의 방법을 사용하는게 좋다.
+        console.log(!!$box.children.length);
+
+
+
+    </script>
+
+
+</body>
+</html>
