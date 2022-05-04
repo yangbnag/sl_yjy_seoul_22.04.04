@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: orange;
+        }
+
+        .red {
+            color: red;
+            border: 2px dashed tomato;
+        }
+
+        .blue {
+            color: blue;
+            border: 2px dashed aqua;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box red"> 안녕</div>
+
+    <button id="change">변경</button>
+
+    <script>
+        //인라인 스타일 조작 <div style ='color:violet;'> 인라인은 1000점 짜리 스타일
+
+        const $box = document.querySelector('.box');
+        // $box.style.color = 'violet';
+        $box.style.fontSize = '1.2em';
+        console.log($box.style.fontSize);
+
+        //클래스 조작 classlist 는 유사배열형태로 / classname은 문자열형태임.
+        // $box.className = 'blue'; // 전체를 교체하기 때문에 .box red 에서 .blue만 남게된다..
+        //$box.className = 'box blue' 처럼 사용 해야지 box가 사라지지 않는다.
+
+        //요소에 클래스를 추가
+        $box.classList.add('circle'); // 추가로 .circle가 됨.
+        $box.classList.add('aaa', 'bbb', 'ccc');
+
+        //요소에 클래스를 제거
+        $box.classList.remove('circle');
+        $box.classList.remove('aaa', 'bbb');
+
+        //요소에 클래스를 교체
+        $box.classList.replace('red', 'blue'); // 교체 당할 클래스를 앞에, 타겟이 되는 클래스를 뒤에.
+
+        //요소에 특정 클래스의 존재 유무 확인
+        console.log($box.classList.contains('red'));
+        console.log($box.classList.contains('box'));
+
+        //요소에 특정 클래스가 있으면 제거, 없으면 추가
+        $box.classList.toggle('circle');
+        $box.classList.toggle('circle');
+
+        const $btn = document.getElementById('change')
+
+        const TARGET = 'circle';
+        console.log(TARGET);
+
+        $btn.onclick = e => {
+            $box.classList.toggle('circle');
+        };
+/*
+        $btn.onclick = e => {
+            // 버튼을 누르면 네모가 동그라미로
+            // 또 누르면 동그라미가 네모로 바뀌는 동작
+
+            if ($box.classList.contains(TARGET)) {
+                // 현재 모양이 동그라미
+                $box.classList.remove(TARGET);
+            } else {
+                // 현재 모양이 네모
+                $box.classList.add(TARGET);
+            }
+
+        };
+*/
+
+                
+    </script>
+</body>
+
+</html>

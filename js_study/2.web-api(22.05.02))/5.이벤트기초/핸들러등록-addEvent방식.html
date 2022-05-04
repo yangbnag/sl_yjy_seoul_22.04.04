@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">클릭하세요!</button>
+
+    <script>
+
+        //addEventListner 방식
+        const $btn = document.getElementById('btn');
+
+        //이벤트 핸들러
+        function sayHello(){
+            alert('안녕하세요!');
+        }
+
+        $btn.addEventListener('click', sayHello);
+
+        $btn.addEventListener('mouseenter',function(){
+            $btn.style.background ='aqua';
+        });
+
+        $btn.addEventListener('click',function(){
+            $btn.style.color='red';
+        });
+
+        //프로퍼티 방식일 경우 위에 sayhello click 이벤트가
+        //아래의 click 함수로 인해 사라지지만
+        //addEventListener는 둘다 쓸수 있다.
+        // 용도에 맞게 사용 하면 된다.
+
+
+        //이벤트 핸들러 제거 [단점: 이름이 없는 함수는 제거를 못함]
+        $btn.removeEventListener('click',sayHello);
+    </script>
+</body>
+</html>

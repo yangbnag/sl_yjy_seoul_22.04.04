@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="users">
+        <li data-user-number="4321" data-role="common">김철수</li>
+    <!-- 케밥 케이스로 data-속성-연결 /회원번호, 일반,관리자 회원 유무-->
+        <li data-user-number="9999" data-role="'admin">박영희</li>
+    </ul>
+
+    <script>
+        const $users = document.querySelector('.users');
+        const [$li1, $li2] = [...$users.children];
+        // 왼쪽은 변수 = 오른쪽은 배열
+
+        //데이터속성 확인
+        console.log($li1.dataset);
+        console.log($li1.dataset.role);
+        console.log($li2.dataset.userNumber);
+
+        //데이터 속성 변경
+        $li2.dataset.role = 'common';
+        console.log($li2.dataset.role);
+
+        //김철수 li태그에 data-user-address 속성 추가
+
+        $li1.dataset.userAddress='서울시 중구'; // 객체 동적추가 처럼 추가
+
+        // dat-user-address 제거
+        delete $li1.dataset.userAddress; // 객체 삭제에서 처럼 삭제
+    </script>
+</body>
+</html>

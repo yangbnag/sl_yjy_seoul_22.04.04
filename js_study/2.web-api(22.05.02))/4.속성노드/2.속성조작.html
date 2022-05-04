@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="user-name" value="홍길동">
+
+    <script>
+        const $input = document.getElementById('user-name');
+
+        //홍길동을 유저네임에 넣고 싶다. 참조 (기본방법)
+        // const userName = $input.attributes.value.value;
+
+        //홍길동을 유저네임에 넣고 싶다. 참조 (쉬운방법)
+        const userName = $input.getAttribute('value');
+        console.log(userName);
+
+        //id를 참조하고 싶다.
+        const inputId = $input.getAttribute('id'); // getAttribute로 참조된 값은 모두 문자형태이다.
+        console.log(inputId);
+
+        //속성값 변경(기본방법)
+        // $input.attributes.value.value = '박영희';
+        //속성값 변경(쉬운방법)
+        $input.setAttribute('value','박영희');
+
+        $input.setAttribute('id','member-name');
+
+        //속성값 추가
+        $input.setAttribute('title','이름입니다.') // 기존에 없던 속성을 쓰면 추가가 된다.
+        $input.setAttribute('placeholder','이름은 한글로 쓰세요.') // 기존에 없던 속성을 쓰면 추가가 된다.
+
+        //속성값 제거(기본방법)
+        // $input.attributes.value.value = '';
+        //속성값 제거(쉬운방법)
+        $input.removeAttribute('value');
+
+        // document.body.removeChild($input); // input 태그를 삭제
+
+        // 속성 존재 유무 확인
+        const logical = $input.hasAttribute('class');
+        console.log(logical);
+        
+
+    </script>
+</body>
+</html>
