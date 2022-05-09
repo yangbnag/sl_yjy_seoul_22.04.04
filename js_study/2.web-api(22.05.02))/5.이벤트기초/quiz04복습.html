@@ -81,38 +81,27 @@
             words etc.</p>
     </div>
 
-    <script>
 
-        /*
-            button 3개에 모두 클릭이벤트가 부여되어야함.
-
-            3개의 이벤트 내용은 같다.
-
-            눌렀을 때 panel이 나오게해야함
-            -> max-height값을 올려줘야댐
-        */
-
-        const $buttonList = [...document.querySelectorAll('.accordion')];
-
-        for (let $btn of $buttonList) {
-            $btn.addEventListener('click', function() {
-
-                $btn.classList.toggle('active');
-
-                const $panel = $btn.nextElementSibling;
-
-                console.log($panel.style.maxHeight);
-
-                if ($panel.style.maxHeight) {
-                    $panel.style.maxHeight = '0';
-                } else {
-                    $panel.style.maxHeight = '500px';
-                }
-            });
-        }
-
-    </script>
-    
 </body>
+
+<script>
+
+
+const $panel = document.querySelector('.panel');
+
+const $btn2 = $panel.nextElementSibling;
+
+
+const $btnList = [...document.querySelectorAll('accordion')];
+for (let $btn of $btnList) {
+    $btn.addEventListener('click',function(){
+        $btn
+    })
+$panel.style.maxHeight = '300px'
+}
+
+
+
+</script>
 
 </html>

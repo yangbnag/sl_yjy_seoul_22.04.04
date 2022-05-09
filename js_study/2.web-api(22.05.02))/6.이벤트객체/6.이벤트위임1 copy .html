@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fruits {
+            display: flex;
+            list-style: none;
+            padding: 20px;
+            border: 2px solid red;
+        }
+
+        #fruits li {
+            width: 100px;
+            background: orange;
+            margin-right: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .active {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="fruits">
+        <li id="apple" >Apple</li>
+        <li id="banana" class="active">Banana</li>
+        <li id="grape">Grape</li>
+        <li id="orange">Orange</li>
+    </ul>
+
+    <p>선택된 과일: <em class="msg">Apple</em></p>
+
+    <script>
+        const $fruits = document.getElementById('fruits');
+
+        function activate(e) {
+            const $liList = [...$fruits.children];
+            // console.log($liList);
+            for(let $li of $liList){
+                if($li.classList.contains('active')) {
+                    $li.classList.remove('active');
+                    break;                    
+                }
+            }
+
+            
+        }
+       console.log(e); 
+    </script>
+
+</body>
+
+</html>

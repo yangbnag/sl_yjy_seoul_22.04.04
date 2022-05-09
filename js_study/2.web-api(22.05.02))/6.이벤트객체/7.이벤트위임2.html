@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fruits {
+            display: flex;
+            list-style: none;
+            padding: 20px;
+            border: 2px solid red;
+        }
+
+        #fruits li {
+            width: 100px;
+            background: orange;
+            margin-right: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .active {
+            color: red;
+            text-decoration: underline;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="fruits">
+        <li id="apple" class="active">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="grape">Grape</li>
+        <li id="orange">Orange</li>
+    </ul>
+
+    <p>선택된 과일: <em class="msg">Apple</em></p>
+
+    <label>
+        # 새로운 과일 추가하기:
+        <input type="text" class="text-box">
+        <button id="add">추가</button>
+    </label>
+
+    <script>
+        const $txtInput = document.querySelector('.text-box');
+        console.log($txtInput);
+
+        const $btn = document.getElementById('add');
+
+        
+        $btn.onclick = function () {
+            if ($txtInput.value === '') {
+                alert('추가하실 과일을 입력해주세요.');
+                return;
+            } else { 
+                const $newLi = document.createElement('li');               
+                $newLi.textContent = $txtInput.value;
+                $fruits.appendChild($newLi);
+                $newLi.setAttribute('id',$txtInput.value.toLowerCase());
+                
+                
+            }
+        }
+
+        const $fruits = document.getElementById('fruits');
+        console.log($fruits.children);
+
+        //이벤트 핸들러 함수 정의
+        function activate(e) {
+
+            //ul을 클릭하면 이하의 코드를 작동시키면 안됨.
+            //$elementNode.matches('css selector')
+            //해당 선택자에 맞는 요소면 true, 아니면 false
+            if (!e.target.matches('#fruits > li')) {
+                return; // 나가라
+            }
+
+            //1. 클릭 대상을 제외한 li태그에 있는 
+            //   class=active 제거
+            //1-1. ul의 모든 자식 가져오기
+            const $liList = [...$fruits.children];
+            console.log($liList);
+
+            //1-2 모든 li를 순회하여 class=active 탐색
+            for (let $li of $liList) {
+                if ($li.classList.contains('active')) {
+                    $li.classList.remove('active');
+                    break;
+                }
+            }
+
+            //2. 클릭 대상에 class=active를 부여
+
+            e.target.classList.add('active');
+
+            //3. 클릭한 li태그의 텍스트를 복사하여
+            const $em = document.querySelector('.msg');
+            $em.textContent = e.target.textContent;
+            //   em태그에 텍스트로 수정
+        }
+
+        $fruits.onclick = activate;
+    </script>
+
+</body>
+
+</html>
