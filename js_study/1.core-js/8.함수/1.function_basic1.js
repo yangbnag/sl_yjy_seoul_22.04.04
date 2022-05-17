@@ -3,7 +3,7 @@
 //김철수가 중복되어 변수를 설정
 var userName;
 userName = '김철수';
-console.log(`${userName}님 안녕하세요~ 방가방가!`);
+// console.log(`${userName}님 안녕하세요~ 방가방가!`);
 console.log(`${userName}님 오늘도 즐거운 하루되세요!`);
 
 ///// 1000 줄의 코드를 작성했다고 가정 한 후에 위에 김철수가 보이지 않을때

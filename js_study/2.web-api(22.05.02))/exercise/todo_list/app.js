@@ -184,6 +184,7 @@ function modifyToDo($modifySpan) {
 
     // 데이터 변동 처리
     const idx = findIndexById($label.parentElement.dataset.id);
+    console.log(idx);
     todos[idx].text = $textSpan.textContent;
     console.log(todos);
 }
@@ -239,7 +240,7 @@ function isValidate() {
         changeCheckState(e.target);
     });
 
-    $toDoList.addEventListener('click', e => {
+    $toDoList.addEventListener('click', e => {        
         if (e.target.matches('.remove span')) {
             // 할 일 삭제 버튼 클릭 이벤트
             // console.log('할 일 삭제!!!');
