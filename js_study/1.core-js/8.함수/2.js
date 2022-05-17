@@ -19,11 +19,11 @@ var circle2 = pi * 17 ** 2;
 function clacAreaCircle(r) {
     return pi * r ** 2;
 }
-
+/*
 var result1 = clacAreaCircle(2);
 console.log(result1);
 var result2 = clacAreaCircle(5);
-console.log(result2);
+console.log(result2);*/
 
 
 makeLine();
@@ -32,8 +32,8 @@ makeLine();
 var solutionNum = 0;
 
 function calculator(x) {
-    for (i = 1; i < x; i++) {
-
+    for (let i = 1; i <= x; i++) {
+        // console.log(5);
         if (x % i === 0) {
             solutionNum += +i;
         }

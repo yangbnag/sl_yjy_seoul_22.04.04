@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- RESET CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"> -->
+    <!-- jQuery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+
+    <h2> 안녕하세요 </h2>
+
+    <p class="content">오늘은 제이쿼리를 학습합니다.</p>
+
+    <button id="hide">숨기기!</button>
+
+    <script>
+        // jQuery의 시작 ready는 js의 defal 기능
+        // $(document).ready(function () {}); 
+        // 위 시작 양식의 축약버전 ↓
+        $(() => {
+            //버튼 요소노드 가져오기
+            /*
+            const $btn = document.getElementById('hide');
+            console.log($btn);*/
+
+            const $btn = $('#hide'); // jquery 선택기
+            console.log($btn);
+
+            //이벤트 등록(click, dblclick, change, ...)
+            $btn.click(e => {
+                // $('.content').css('display','none');
+                $('.content').hide(); //.show()
+            });
+        });
+    </script>
+</body>
+
+</html>
