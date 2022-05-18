@@ -4,6 +4,14 @@
 function hideGoTop(scrollTop) {
     const $goTop = document.querySelector('.go-top');
 
+    /*
+    
+    toggle 함수의 2번째 인수로 논리값을 전달하면
+    true일 경우 클래스를 강제로 추가 하고,
+    false일 경우 클래스를 강제로 제거한다.
+
+    */
+
     $goTop.classList.toggle('hide', scrollTop < 800);
 
     /*
