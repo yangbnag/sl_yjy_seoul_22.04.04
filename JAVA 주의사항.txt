@@ -1,0 +1,29 @@
+값비교 == : 기본타입 비교만 가능
+문자열 비교는
+
+문자열1 == 문자열 2 (x)
+문자열1.equals(문자열2)
+
+BufferedReader br = new 
+
+String s = br.readline();
+
+문자열 => 정수 변환 : Integer.parseInt(변환문자열)
+문자열 => 실수 변환 : Double.parseDouble( 변환문자열)
+System.out.println(num+100);
+
+
+package codingtest.chap04;
+
+public class Q05 {
+
+    public static void main(String[] args) {
+
+        String s = "OOXXXOOXX";
+        // 문자열 특정 단일문자 취득
+        System.out.println(s.charAt(0));
+        System.out.println(s.charAt(2));
+        // 문자열 길이 구하기
+        System.out.println(s.length());
+    }
+}

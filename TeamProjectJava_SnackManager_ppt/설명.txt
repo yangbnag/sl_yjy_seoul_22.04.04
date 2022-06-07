@@ -1,0 +1,77 @@
+해원's 파트
+
+SnackProgramMain
+
+	- mainMenu() 에서 로그인을 하여 직원일 경우, EmployeePage의 employeePage() 호출
+
+
+===================================================================================
+
+EmployeePage
+
+	- employeePage(Employee employee) = 직원's 메인페이지
+		- mainMenu() 에서 로그인한 그 직원을 argument로 가져옴
+
+	- 1. 간식 재고 조회 = viewSnackStock();
+		- 탕비실에 있는 간식 재고 조회하는 메서드
+
+		- SnackPantry 클래스에 있는 printSnackPantry() 사용
+	
+	- 2. 간식비 계좌 조회 = viewSnackAccount(employee);
+		- 그 직원의 간식비 계좌를 조회하는 메서드
+		
+		- Employee 클래스에 있는 getAccount() 사용
+
+	- 3. 간식 구입 = purchaseSnack(employee);
+		- 그 직원이 탕비실에 있는 간식을 사는 메서드
+
+		- 간식 이름과 간식 개수를 입력 받는데, 탕비실에 없는 간식일 경우,
+		  아니면 구입할 간식의 값이 본인의 간식비 잔고보다 많을 경우, 
+		  아니면 구입할 간식의 개수가 탕비실에 있는 개수보다 많을 경우, 실패
+
+		- 성공했을 경우, SnackPantry에 있는 Snack의 개수를 산 개수만큼 빼주고,
+		  직원이 낸 돈만큼 본인의 잔고에서 빼주고, 직원이 낸 돈만큼 SnackPantry에 있는
+		  돈통 (money)에 돈이 쌓임
+
+	- 4. 간식 요청 = requestSnack();
+		- 그 직원이 탕비실에 없지만 원하는 간식을 요청하는 메서드
+		
+		- SnackRequest에 있는 add(request) 사용하여 requests 배열에 넣어줌
+
+		- 신청서가 가득 찰 경우 더이상 추가할 수 없음
+
+	- 그 외 이전으로 돌아갈 수 있고, 잘못 입력했을 경우 while loop true 로 계속 돌아감
+
+===================================================================================
+
+Snack
+
+    	private String name;
+    	private int price;
+   	private int stock;
+ 
+	- 간식 이름, 가격, 재고를 가지고 있는 Snack
+
+SnackRequest 
+	
+	private String[] requests;
+    	private int numRequests;
+    	private SnackPantry pantry;
+
+	- 간식 신청서를 저장할 배열, 신청서 개수, SnackPantry 불러오기
+	
+	- 신청서 마감 메서드 = closeRequest()
+		- 간식 관리자가 신청서 마감을 했을때, 과자 가격을 입력받아 정하고,
+		  신청서의 이름과 그 개수를 저장하여 비교해서 제일 많이 신청된 간식을 선택
+		- 선택된 간식을 탕비실에 add() 해주고, 그 과자를 10개 구매하는데 드는 총 비용을 회사 간식비에서
+		  차감해주는데, 그것은 SnackPage에서 함
+
+SnackPantry
+
+	 private Snack[] snacks;
+	 private int count;
+    	 private int money;
+
+	탕비실에 있는 간식들의 정보를 저장할 간식배열, 그 안에 있는 간식 개수, 그리고 돈통
+
+		
