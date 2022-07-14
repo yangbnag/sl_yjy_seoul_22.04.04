@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .board-list{ 
+            
+            border: 2px solid;
+            width: 800px;
+            margin: 50px auto 50px;
+
+        }
+
+        .board-list th {
+            border: 2px solid;
+            width: 100px;
+            
+        }
+
+        .board-list th:nth-child(3){
+            width: 400px;
+        }
+
+        .board-list th:nth-child(2){
+            width: 150px;
+        }
+
+        .board-list td {
+            border: 2px solid;
+            text-align: center;
+        }
+
+        .btn-write {
+            margin: 10px 0;
+            margin-left: 680px;
+            background: #000;
+            width: 100px;
+            text-align: center;
+
+        }
+
+        .btn {
+            color: white;
+        }
+
+
+    </style>    
+
+
+</head>
+<body>
+ 
+        <div class="board-list">
+            <table class="table table-dark table-striped table-hover articles">
+                <tr>
+                    <th>번호</th>
+                    <th>작성자</th>
+                    <th>제목</th>
+                    <th>조회수</th>
+                    <th>작성시간</th>
+                </tr>
+
+                
+                    <tr>
+                        <td>12</td>
+                        <td>ㅁㅁㅁ</td>
+                        <td>ㅁㅁㅁ</td>
+                        <td>0</td>
+                        <td>날짜</td>
+                    </tr>
+                
+                  
+                
+            </table>
+
+            <div class="btn-write">
+                <a class="btn btn-outline-danger btn-lg" href="/board/write">글쓰기</a>
+            </div>
+        </div>
+        
+</body>
+</html>
