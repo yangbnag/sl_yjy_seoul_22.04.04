@@ -30,4 +30,6 @@ number = result - 20;
 console.log(number);
 
 // 문자열을 저장할 때는 따옴표(홑, 겹따옴표 둘다 가능)
-var friend_name : '고길동' ;
+var friend_name = '고길동' ;
+
+console.log(friend_name);

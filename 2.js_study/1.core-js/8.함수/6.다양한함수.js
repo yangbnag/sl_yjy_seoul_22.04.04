@@ -33,6 +33,7 @@ var sayNickName = function(nick){
     return nick + '메롱~';
 }
 
+
 var sayNickName =(nick) =>{
     console.log(`${nick}님 안녕~~`);
     return nick + '메롱~';
@@ -45,6 +46,7 @@ var hello = function() {
 var hello = () => {
     console.log('hello!!!!');
 }
+
 
 //만약에 함수의 코드가 한문장이라면 중괄호 생략가능
 var hello = () => console.log('hello!!!!');
